@@ -59,3 +59,6 @@ gem 'sass-rails', '>= 5.0.6'
 
 # for fontawesome
 gem 'font-awesome-rails'
+
+# for user authorication
+gem 'devise'
