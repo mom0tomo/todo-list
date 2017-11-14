@@ -6,7 +6,7 @@ Simple task management tool made with Ruby on Rails.
 ## Versions
 
 * docker for Mac 17.09.0-ce
-* Ruby 2.4.2
+* Ruby 2.4.1
 * Rails 5.1.3
 
 ## Starting the servers
