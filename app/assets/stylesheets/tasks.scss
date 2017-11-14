@@ -16,6 +16,8 @@ body {
 .btn-outline-success {
 	color: #000;
 	border-color: #000;
+	padding: 3px 8px;
+	font-size: .8rem;
 	&:hover {
 		background-color: #000;
 		border-color: #000;
@@ -23,11 +25,24 @@ body {
 }
 
 .navbar-light .navbar-nav .nav-link {
-	padding: 10px;
+	padding: 6px;
 	margin-left: 10px;
 	&:hover {
 		color: #fff;
 		background-color: #999;
 		border-radius: 0.25rem;
+	}
+}
+
+.nav-item > form > input {
+	font-size: .7rem;
+}
+
+@media screen and (max-width: 992px) {
+	.navbar-nav {
+		flex-direction: row;
+	}
+	.navbar-light .navbar-nav .nav-link {
+		margin: 7px 10px;
 	}
 }
