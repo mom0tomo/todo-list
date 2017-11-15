@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
 
+<%= render 'tasks/form', task: @task %>
 <% @tasks.each do |task| %>
 	<p>Welcome, <%= task.user_id %>!</p>
 	<div class="card">
