@@ -5,6 +5,22 @@ body {
 	margin-top: 0;
 }
 
+input {
+	&:focus {
+		outline: none;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+
+.form-control:focus{
+	border-color: gainsboro;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
 .card-block {
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 1 auto;
@@ -24,6 +40,10 @@ body {
 	}
 }
 
+.navbar-brand:hover {
+	background-color: inherit;
+}
+
 .navbar-light .navbar-nav .nav-link {
 	padding: 6px;
 	margin-left: 10px;
@@ -40,6 +60,37 @@ body {
 
 .nav-item.search {
 	margin-right: 15px;
+}
+
+.card > .card-item { 
+	border-bottom: 1px solid #eee;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+	> input {
+		border: none;
+		background: none;
+		width: 100%;
+	}
+	&.card-text {
+		margin-bottom: 0;
+	}
+}
+
+div.actions {
+	margin: 10px 0 0 0;
+	text-align: right;
+	> input {
+		border: none;
+		background: none;
+		padding: 10px 5px 2px 5px;
+		&:hover {
+			color: #999;
+		}
+	}
+}
+
+.card-link > a {
+	margin-left: 10px;
 }
 
 @media screen and (max-width: 992px) {

@@ -1,15 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<%= render 'tasks/form', task: @task %>
 <% @tasks.each do |task| %>
-	<p>Welcome, <%= task.user_id %>!</p>
-	<div class="card">
-		<div class="card-block">
-			<h4 class="card-title"><%= task.title %></h4>
-			<p class="card-text"><%= task.content %></p>
-			<%= link_to 'Show', task, class: "card-link" %> 
-			<%= link_to 'Edit', edit_task_path(task), class: "card-link" %>
-			<%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' }, class: "card-link" %>
+	<div class="container-fluid">
+		<p>Welcome, <%= task.user_name %>!</p>
+		<%= render 'tasks/form', task: @task %>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card card-block">
+					<h4 class="card-title"><%= task.title %></h4>
+					<p class="card-text"><%= task.content %></p>
+					<div class="card-link">
+						<%= link_to 'Show', task %> 
+						<%= link_to 'Edit', edit_task_path(task) %>
+						<%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 <% end %>

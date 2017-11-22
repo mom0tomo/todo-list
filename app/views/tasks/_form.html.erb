@@ -10,23 +10,22 @@
 			</ul>
 		</div>
 	<% end %>
+	<div class="form-group">
+		<div class="card card-block">
+			<div class="card-item">
+				<%= form.number_field :user_id, id: :task_user_id %>
+			</div>
 
-	<div class="field">
-		<%= form.label :user_id %>
-		<%= form.number_field :user_id, id: :task_user_id %>
-	</div>
+			<div class="card-item card-title">
+				<%= form.text_field :title, id: :task_title, placeholder: 'Title' %>
+			</div>
 
-	<div class="field">
-		<%= form.label :title %>
-		<%= form.text_field :title, id: :task_title %>
-	</div>
-
-	<div class="field">
-		<%= form.label :content %>
-		<%= form.text_field :content, id: :task_content %>
-	</div>
-
-	<div class="actions">
-		<%= form.submit %>
+			<div class="card-item card-text">
+				<%= form.text_field :content, id: :task_content, placeholder: 'Take a note...'  %>
+			</div>
+			<div class="actions card-link">
+				<%= form.submit %>
+			</div>
+		</div>
 	</div>
 <% end %>
